@@ -1,0 +1,206 @@
+{
+  "name": "Decipher XML",
+  "scopeName": "text.decipher.xml",
+  "patterns": [
+    { "include": "#pythonExec" },
+    { "include": "#pythonValidate" },
+    { "include": "#pythonValidateCell" },
+    { "include": "#pythonValidateRow" },
+    { "include": "#pythonValidateCol" },
+    { "include": "#htmlBlock" },
+    { "include": "#jsCdataStyle" },
+    { "include": "#jsEscapedScript" },
+    { "include": "#cssCdataStyle" },
+    { "include": "#cssEscapedStyle" },
+    { "include": "text.xml" }
+  ],
+  "repository": {
+    "pythonExec": {
+      "name": "meta.embedded.block.python.exec.decipher-xml",
+      "begin": "(<)(exec)(\\b[^>]*)(>)",
+      "end": "(</)(exec)(>)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.xml" },
+        "2": { "name": "entity.name.tag.xml" },
+        "3": { "name": "meta.tag.attributes.xml" },
+        "4": { "name": "punctuation.definition.tag.end.xml" }
+      },
+      "endCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.xml" },
+        "2": { "name": "entity.name.tag.xml" },
+        "3": { "name": "punctuation.definition.tag.end.xml" }
+      },
+      "contentName": "source.python",
+      "patterns": [{ "include": "source.python" }]
+    },
+
+    "pythonValidate": {
+      "name": "meta.embedded.block.python.validate.decipher-xml",
+      "begin": "(<)(validate)(>)",
+      "end": "(</)(validate)(>)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.xml" },
+        "2": { "name": "entity.name.tag.xml" },
+        "3": { "name": "punctuation.definition.tag.end.xml" }
+      },
+      "endCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.xml" },
+        "2": { "name": "entity.name.tag.xml" },
+        "3": { "name": "punctuation.definition.tag.end.xml" }
+      },
+      "contentName": "source.python",
+      "patterns": [{ "include": "source.python" }]
+    },
+
+    "pythonValidateCell": {
+      "name": "meta.embedded.block.python.validateCell.decipher-xml",
+      "begin": "(<)(validateCell)(>)",
+      "end": "(</)(validateCell)(>)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.xml" },
+        "2": { "name": "entity.name.tag.xml" },
+        "3": { "name": "punctuation.definition.tag.end.xml" }
+      },
+      "endCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.xml" },
+        "2": { "name": "entity.name.tag.xml" },
+        "3": { "name": "punctuation.definition.tag.end.xml" }
+      },
+      "contentName": "source.python",
+      "patterns": [{ "include": "source.python" }]
+    },
+
+    "pythonValidateRow": {
+      "name": "meta.embedded.block.python.validateRow.decipher-xml",
+      "begin": "(<)(validateRow)(>)",
+      "end": "(</)(validateRow)(>)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.xml" },
+        "2": { "name": "entity.name.tag.xml" },
+        "3": { "name": "punctuation.definition.tag.end.xml" }
+      },
+      "endCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.xml" },
+        "2": { "name": "entity.name.tag.xml" },
+        "3": { "name": "punctuation.definition.tag.end.xml" }
+      },
+      "contentName": "source.python",
+      "patterns": [{ "include": "source.python" }]
+    },
+
+    "pythonValidateCol": {
+      "name": "meta.embedded.block.python.validateCol.decipher-xml",
+      "begin": "(<)(validateCol)(>)",
+      "end": "(</)(validateCol)(>)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.xml" },
+        "2": { "name": "entity.name.tag.xml" },
+        "3": { "name": "punctuation.definition.tag.end.xml" }
+      },
+      "endCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.xml" },
+        "2": { "name": "entity.name.tag.xml" },
+        "3": { "name": "punctuation.definition.tag.end.xml" }
+      },
+      "contentName": "source.python",
+      "patterns": [{ "include": "source.python" }]
+    },
+
+    "htmlBlock": {
+      "name": "meta.embedded.block.html.decipher-xml",
+      "begin": "(<)(style)(\\b[^>]*)(>\\s*<!\\[CDATA\\[)",
+      "end": "(\\]\\]>\\s*)(</)(style)(>)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.xml" },
+        "2": { "name": "entity.name.tag.xml" },
+        "3": { "name": "meta.tag.attributes.xml" },
+        "4": { "name": "meta.tag.cdata.begin.xml" }
+      },
+      "endCaptures": {
+        "1": { "name": "meta.tag.cdata.end.xml" },
+        "2": { "name": "punctuation.definition.tag.begin.xml" },
+        "3": { "name": "entity.name.tag.xml" },
+        "4": { "name": "punctuation.definition.tag.end.xml" }
+      },
+      "contentName": "text.html.basic",
+      "patterns": [{ "include": "text.html.basic" }]
+    },
+
+    "jsCdataStyle": {
+      "name": "meta.embedded.block.javascript.style.decipher-xml",
+      "begin": "(<)(style)(?=[^>]*\\bname\\s*=\\s*[\"']respview\\.client\\.js[\"'])(\\b[^>]*)(>\\s*<!\\[CDATA\\[)",
+      "end": "(\\]\\]>\\s*)(</)(style)(>)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.xml" },
+        "2": { "name": "entity.name.tag.xml" },
+        "3": { "name": "meta.tag.attributes.xml" },
+        "4": { "name": "meta.tag.cdata.begin.xml" }
+      },
+      "endCaptures": {
+        "1": { "name": "meta.tag.cdata.end.xml" },
+        "2": { "name": "punctuation.definition.tag.begin.xml" },
+        "3": { "name": "entity.name.tag.xml" },
+        "4": { "name": "punctuation.definition.tag.end.xml" }
+      },
+      "contentName": "source.js",
+      "patterns": [{ "include": "source.js" }]
+    },
+
+    "cssCdataStyle": {
+      "name": "meta.embedded.block.css.style.decipher-xml",
+      "begin": "(<)(style)(?=[^>]*\\bname\\s*=\\s*[\"']respview\\.client\\.css[\"'])(\\b[^>]*)(>\\s*<!\\[CDATA\\[)",
+      "end": "(\\]\\]>\\s*)(</)(style)(>)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.xml" },
+        "2": { "name": "entity.name.tag.xml" },
+        "3": { "name": "meta.tag.attributes.xml" },
+        "4": { "name": "meta.tag.cdata.begin.xml" }
+      },
+      "endCaptures": {
+        "1": { "name": "meta.tag.cdata.end.xml" },
+        "2": { "name": "punctuation.definition.tag.begin.xml" },
+        "3": { "name": "entity.name.tag.xml" },
+        "4": { "name": "punctuation.definition.tag.end.xml" }
+      },
+      "contentName": "source.css",
+      "patterns": [{ "include": "source.css" }]
+    },
+
+    "jsEscapedScript": {
+      "name": "meta.embedded.block.javascript.escaped.decipher-xml",
+      "begin": "(&lt;)(script)(&gt;)",
+      "end": "(&lt;/)(script)(&gt;)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.xml" },
+        "2": { "name": "entity.name.tag.xml" },
+        "3": { "name": "punctuation.definition.tag.end.xml" }
+      },
+      "endCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.xml" },
+        "2": { "name": "entity.name.tag.xml" },
+        "3": { "name": "punctuation.definition.tag.end.xml" }
+      },
+      "contentName": "source.js",
+      "patterns": [{ "include": "source.js" }]
+    },
+
+    "cssEscapedStyle": {
+      "name": "meta.embedded.block.css.escaped.decipher-xml",
+      "begin": "(&lt;)(style)(&gt;)",
+      "end": "(&lt;/)(style)(&gt;)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.xml" },
+        "2": { "name": "entity.name.tag.xml" },
+        "3": { "name": "punctuation.definition.tag.end.xml" }
+      },
+      "endCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.xml" },
+        "2": { "name": "entity.name.tag.xml" },
+        "3": { "name": "punctuation.definition.tag.end.xml" }
+      },
+      "contentName": "source.css",
+      "patterns": [{ "include": "source.css" }]
+    }
+
+  }
+}

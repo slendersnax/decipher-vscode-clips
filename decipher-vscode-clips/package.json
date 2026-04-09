@@ -4,7 +4,7 @@
   "description": "Decipher snippets and commands for VS Code",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.110.0"
+    "vscode": "^1.100.0"
   },
   "categories": [
     "Other"
@@ -14,10 +14,37 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "languages": [
+      {
+        "id": "decipher-xml",
+        "aliases": [
+          "Decipher XML"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "decipher-xml",
+        "scopeName": "text.decipher.xml",
+        "path": "./syntaxes/decipher-xml.tmLanguage.json",
+        "embeddedLanguages": {
+          "source.python": "python",
+          "text.html.basic": "html",
+          "source.css": "css",
+          "source.js": "javascript"
+        }
+      }
+    ],
     "commands": [
       {
         "command": "decipher-vscode-clips.helloWorld",
         "title": "Hello World"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "decipher-xml",
+        "path": "./snippets/decipher-xml.code-snippets"
       }
     ]
   },

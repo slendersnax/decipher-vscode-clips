@@ -1,0 +1,443 @@
+{
+  "postText": {
+    "prefix": "postText",
+    "body": [
+      "ss:postText=\"${0}\""
+    ],
+    "description": "postText"
+  },
+  "colempty": {
+    "prefix": "colempty",
+    "body": [
+      "<style name=\"question.left-blank-legend\"><![CDATA[",
+      "<\\$(tag) class=\"cell empty empty-left empty-\\$(pos) unused \\${\"desktop\" if this.grouping.cols else \"mobile\"} border-collapse\"></\\$(tag)>",
+      "]]${-1}></style>"
+    ],
+    "description": "colempty"
+  },
+  "quota": {
+    "prefix": "quota",
+    "body": [
+      "<quota label=\"q_$0\" sheet=\"$0\"/>"
+    ],
+    "description": "quota"
+  },
+  "qacodes": {
+    "prefix": "qacodes",
+    "body": [
+      "<style name='survey.question.answers.start' mode=\"before\"> <![CDATA[",
+      "\\@if gv.hasQA(True) and gv.showCms()",
+      "<div class=\"surveyWarning\">",
+      "    <div class=\"info\">",
+      "        <blockquote style=\"text-align: center;\">The below results will not show to respondents. It is shown only when \"QA Codes\" are turned on.</blockquote>",
+      "    </div>",
+      "</div>",
+      "\\@else",
+      "<style>",
+      ".answers { display: none !important; }",
+      "</style>",
+      "\\@endif",
+      "]]${-1}></style>"
+    ],
+    "description": "qacodes"
+  },
+  "verify": {
+    "prefix": "verify",
+    "body": [
+      "verify=\"${0:range(0,100)}\""
+    ],
+    "description": "verify"
+  },
+  "goto": {
+    "prefix": "goto",
+    "body": [
+      "<goto target=\"${1}\" cond=\"${0}\"/>"
+    ],
+    "description": "goto"
+  },
+  "br1": {
+    "prefix": "br1",
+    "body": [
+      "<br/>"
+    ],
+    "description": "br1"
+  },
+  "su": {
+    "prefix": "su",
+    "body": [
+      "<suspend/>"
+    ],
+    "description": "su"
+  },
+  "states": {
+    "prefix": "states",
+    "body": [
+      "<choice label=\"ch1\">Alabama</choice>",
+      "  <choice label=\"ch2\">Alaska</choice>",
+      "  <choice label=\"ch3\">Arizona</choice>",
+      "  <choice label=\"ch4\">Arkansas</choice>",
+      "  <choice label=\"ch5\">California</choice>",
+      "  <choice label=\"ch6\">Colorado</choice>",
+      "  <choice label=\"ch7\">Connecticut</choice>",
+      "  <choice label=\"ch8\">Delaware</choice>",
+      "  <choice label=\"ch9\">District of Columbia</choice>",
+      "  <choice label=\"ch10\">Florida</choice>",
+      "  <choice label=\"ch11\">Georgia</choice>",
+      "  <choice label=\"ch12\">Hawaii</choice>",
+      "  <choice label=\"ch13\">Idaho</choice>",
+      "  <choice label=\"ch14\">Illinois</choice>",
+      "  <choice label=\"ch15\">Indiana</choice>",
+      "  <choice label=\"ch16\">Iowa</choice>",
+      "  <choice label=\"ch17\">Kansas</choice>",
+      "  <choice label=\"ch18\">Kentucky</choice>",
+      "  <choice label=\"ch19\">Louisiana</choice>",
+      "  <choice label=\"ch20\">Maine</choice>",
+      "  <choice label=\"ch21\">Maryland</choice>",
+      "  <choice label=\"ch22\">Massachusetts</choice>",
+      "  <choice label=\"ch23\">Michigan</choice>",
+      "  <choice label=\"ch24\">Minnesota</choice>",
+      "  <choice label=\"ch25\">Mississippi</choice>",
+      "  <choice label=\"ch26\">Missouri</choice>",
+      "  <choice label=\"ch27\">Montana</choice>",
+      "  <choice label=\"ch28\">Nebraska</choice>",
+      "  <choice label=\"ch29\">Nevada</choice>",
+      "  <choice label=\"ch30\">New Hampshire</choice>",
+      "  <choice label=\"ch31\">New Jersey</choice>",
+      "  <choice label=\"ch32\">New Mexico</choice>",
+      "  <choice label=\"ch33\">New York</choice>",
+      "  <choice label=\"ch34\">North Carolina</choice>",
+      "  <choice label=\"ch35\">North Dakota</choice>",
+      "  <choice label=\"ch36\">Ohio</choice>",
+      "  <choice label=\"ch37\">Oklahoma</choice>",
+      "  <choice label=\"ch38\">Oregon</choice>",
+      "  <choice label=\"ch39\">Pennsylvania</choice>",
+      "  <choice label=\"ch40\">Rhode Island</choice>",
+      "  <choice label=\"ch41\">South Carolina</choice>",
+      "  <choice label=\"ch42\">South Dakota</choice>",
+      "  <choice label=\"ch43\">Tennessee</choice>",
+      "  <choice label=\"ch44\">Texas</choice>",
+      "  <choice label=\"ch45\">Utah</choice>",
+      "  <choice label=\"ch46\">Vermont</choice>",
+      "  <choice label=\"ch47\">Virginia</choice>",
+      "  <choice label=\"ch48\">Washington</choice>",
+      "  <choice label=\"ch49\">West Virginia</choice>",
+      "  <choice label=\"ch50\">Wisconsin</choice>",
+      "  <choice label=\"ch51\">Wyoming</choice>",
+      "  <choice label=\"ch52\">Other</choice>"
+    ],
+    "description": "states"
+  },
+  "validate": {
+    "prefix": "validate",
+    "body": [
+      "<validate>",
+      "${0}",
+      "</validate>"
+    ],
+    "description": "validate"
+  },
+  "var": {
+    "prefix": "var",
+    "body": [
+      "<var name=\"${0:variablename}\"${1: unique=\"1\"}${2: required=\"1\"}${3: filename=\"invited.txt\"} />"
+    ],
+    "description": "var"
+  },
+  "rating": {
+    "prefix": "rating",
+    "body": [
+      "type=\"rating\"${0: values=\"order\"}"
+    ],
+    "description": "rating"
+  },
+  "cmbstyle": {
+    "prefix": "cmbstyle",
+    "body": [
+      "style=\"noGrid\" ss:questionClassNames=\"flexGrid\""
+    ],
+    "description": "cmbstyle"
+  },
+  "block": {
+    "prefix": "block",
+    "body": [
+      "<block label=\"${1}\" cond=\"${2}\">",
+      "${0}",
+      "</block>"
+    ],
+    "description": "block"
+  },
+  "leftblank": {
+    "prefix": "leftblank",
+    "body": [
+      "<style name='question.left-blank-legend'> <![CDATA[",
+      "<\\$(tag) class=\"cell nonempty legend col-legend-top col-legend-basic \\${\"desktop\" if this.grouping.cols else \"mobile\"} border-collapse\">${0:Res}</\\$(tag)>",
+      "]]${-1}></style>"
+    ],
+    "description": "leftblank"
+  },
+  "cmm": {
+    "prefix": "cmm",
+    "body": [
+      "<comment>$0$TM_SELECTED_TEXT</comment>"
+    ],
+    "description": "cmm"
+  },
+  "term": {
+    "prefix": "term",
+    "body": [
+      "<term cond=\"${1}\">${2}</term>"
+    ],
+    "description": "term"
+  },
+  "execute": {
+    "prefix": "execute",
+    "body": [
+      "where=\"execute\""
+    ],
+    "description": "execute"
+  },
+  "res": {
+    "prefix": "res",
+    "body": [
+      "<res label=\"${1}\">${0}</res>"
+    ],
+    "description": "res"
+  },
+  "js": {
+    "prefix": "js",
+    "body": [
+      "<style name=\"respview.client.js\"><![CDATA[",
+      "<script>",
+      "${0}",
+      "</script>",
+      "]]${-1}></style>"
+    ],
+    "description": "js"
+  },
+  "aa": {
+    "prefix": "aa",
+    "body": [
+      "aggregate=\"0\" percentages=\"0\""
+    ],
+    "description": "aa"
+  },
+  "noa": {
+    "prefix": "noa",
+    "body": [
+      "<noanswer label=\"r99\">$0$TM_SELECTED_TEXT</noanswer>"
+    ],
+    "description": "noa"
+  },
+  "ld": {
+    "prefix": "ld",
+    "body": [
+      "ss:listDisplay=\"0\""
+    ],
+    "description": "ld"
+  },
+  "ra": {
+    "prefix": "ra",
+    "body": [
+      "randomize=\"0\""
+    ],
+    "description": "ra"
+  },
+  "ins": {
+    "prefix": "ins",
+    "body": [
+      "<insert source=\"$0\"/>"
+    ],
+    "description": "ins"
+  },
+  "captcha": {
+    "prefix": "captcha",
+    "body": [
+      "<logic",
+      "  uses=\"recaptcha.1\"",
+      "  label=\"Q99\"/>",
+      "",
+      "<term cond=\"not Q99.human\">Captcha fail</term>"
+    ],
+    "description": "captcha"
+  },
+  "html": {
+    "prefix": "html",
+    "body": [
+      "<html",
+      "  label=\"${1:label}\"",
+      "  where=\"survey\">",
+      "  ${0}",
+      "</html>"
+    ],
+    "description": "html"
+  },
+  "todo": {
+    "prefix": "todo",
+    "body": [
+      "<!-- todo: ${0} -->"
+    ],
+    "description": "todo"
+  },
+  "rep": {
+    "prefix": "rep",
+    "body": [
+      "where=\"report\""
+    ],
+    "description": "rep"
+  },
+  "page.head": {
+    "prefix": "page.head",
+    "body": [
+      "<style name=\"page.head\"><![CDATA[",
+      "  <style>",
+      "    ${0}",
+      "  </style>",
+      "]]${-1}></style>"
+    ],
+    "description": "page.head"
+  },
+  "define": {
+    "prefix": "define",
+    "body": [
+      "<define label=\"$0\">",
+      "$TM_SELECTED_TEXT",
+      "</define>"
+    ],
+    "description": "define"
+  },
+  "copy": {
+    "prefix": "copy",
+    "body": [
+      "onLoad=\"copy('${1}', rows=True${0:, exclude=''})\""
+    ],
+    "description": "copy"
+  },
+  "ee": {
+    "prefix": "ee",
+    "body": [
+      "exclusive=\"1\" randomize=\"0\""
+    ],
+    "description": "ee"
+  },
+  "css": {
+    "prefix": "css",
+    "body": [
+      "<style name=\"respview.client.css\"><![CDATA[",
+      "<style>",
+      "${0}",
+      "</style>",
+      "]]${-1}></style>"
+    ],
+    "description": "css"
+  },
+  "languages": {
+    "prefix": "languages",
+    "body": [
+      "<languages default=\"english\">",
+      "    <language name=\"english\" var=\"co\" value=\"us\"/>",
+      "</languages>"
+    ],
+    "description": "languages"
+  },
+  "br": {
+    "prefix": "br",
+    "body": [
+      "<br/><br/>"
+    ],
+    "description": "br"
+  },
+  "rtlfix": {
+    "prefix": "rtlfix",
+    "body": [
+      "&#x200E;"
+    ],
+    "description": "rtlfix"
+  },
+  "exec": {
+    "prefix": "exec",
+    "body": [
+      "<exec>",
+      "${0}",
+      "</exec>"
+    ],
+    "description": "exec"
+  },
+  "oe": {
+    "prefix": "oe",
+    "body": [
+      "open=\"1\" openSize=\"25\" randomize=\"0\""
+    ],
+    "description": "oe"
+  },
+  "tooltip": {
+    "prefix": "tooltip",
+    "body": [
+      "<span class=\"tooltip\" title=\"$0\">$TM_SELECTED_TEXT</span>"
+    ],
+    "description": "tooltip"
+  },
+  "sh": {
+    "prefix": "sh",
+    "body": [
+      "shuffle=\"rows\""
+    ],
+    "description": "sh"
+  },
+  "label": {
+    "prefix": "label",
+    "body": [
+      "<label label=\"${0}\"/>"
+    ],
+    "description": "label"
+  },
+  "cond": {
+    "prefix": "cond",
+    "body": [
+      "cond=\"${0}\""
+    ],
+    "description": "cond"
+  },
+  "rtl": {
+    "prefix": "rtl",
+    "body": [
+      "<style cond=\"co in ['isr']\" mode=\"after\" name=\"respview.client.css\"><![CDATA[",
+      "<style>",
+      "  body { direction: rtl; }",
+      "  .survey-buttons { text-align: left !important; }",
+      "  #surveyContent, .survey-body, .question-text, .instruction-text,",
+      "  .grid.grid-table-mode .row-legend, .grid-desktop-mode.grid-list-mode .cell-section,",
+      "  .grid-single-col .cell, .grid[data-settings*='single-col'] .cell,",
+      "  .noRows .grid.grid.grid-table-mode .colCount-1 .element,",
+      "  .noRows .grid.grid.grid-table-mode .colCount-1 .col-legend { text-align: right !important; }",
+      "  .survey-body .fir-hidden { left: auto !important; right: -9999px !important; }",
+      "</style>",
+      "]]${-1:}></style>"
+    ],
+    "description": "rtl"
+  },
+  "note": {
+    "prefix": "note",
+    "body": [
+      "<note>${0}</note>"
+    ],
+    "description": "note"
+  },
+  "question.after": {
+    "prefix": "question.after",
+    "body": [
+      "<style name=\"question.after\" wrap=\"ready\"><![CDATA[",
+      "${0}",
+      "]]${-1}></style>"
+    ],
+    "description": "question.after"
+  },
+  "virtual": {
+    "prefix": "virtual",
+    "body": [
+      "<virtual>",
+      "${0}",
+      "</virtual>"
+    ],
+    "description": "virtual"
+  }
+}
