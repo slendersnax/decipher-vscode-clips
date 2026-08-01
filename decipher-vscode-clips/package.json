@@ -46,6 +46,13 @@
         "language": "decipher-xml",
         "path": "./snippets/decipher-xml.code-snippets"
       }
+    ],
+    "keybindings": [
+      {
+        "command": "editor.action.insertSnippet",
+        "key": "ctrl+alt+p",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      }
     ]
   },
   "scripts": {
