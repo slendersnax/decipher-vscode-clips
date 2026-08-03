@@ -4,8 +4,8 @@ export function makeRadio(text: string): string {
     const question = tidyQuestionInput(text);
 
     let input = question.input;
-    let label = question.label;
-    let title = question.title;
+    let label = question.label.trim();
+    let title = question.title.trim();
 
     // checking if we only have label and title
     if (input.trim() == "") {
@@ -22,8 +22,8 @@ export function makeRadio(text: string): string {
 
     let comment = "";
 
-    if (input.indexOf("<comment>") == -1) {
-        if ((input.indexOf("<row>") > -1) && (input.indexOf("<col>") > -1)) {
+    if (!input.includes("<comment>")) {
+        if ((input.includes("<row>")) && (input.includes("<col>"))) {
             comment = "<comment>Select one in each row</comment>\n";
         }
         else {
@@ -31,7 +31,7 @@ export function makeRadio(text: string): string {
         }
     }
 
-    if (input.indexOf("<comment>") == -1) {
+    if (!input.includes("<comment>")) {
         return `
 <radio 
   label="${label}">

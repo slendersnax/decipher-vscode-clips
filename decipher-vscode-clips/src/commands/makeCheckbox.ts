@@ -1,10 +1,10 @@
 import * as vscode from "vscode";
 
-import { makeRadio } from "../transformers/makeRadio";
+import { makeCheckbox } from "../transformers/makeCheckbox";
 
-export function registerMakeRadio(context: vscode.ExtensionContext) {
+export function registerMakeCheckbox(context: vscode.ExtensionContext) {
     const disposable = vscode.commands.registerCommand(
-        "decipher.makeRadio",
+        "decipher.makeCheckbox",
         () => {
             const editor = vscode.window.activeTextEditor;
 
@@ -15,7 +15,7 @@ export function registerMakeRadio(context: vscode.ExtensionContext) {
             editor.edit(editBuilder => {
                 for (const selection of editor.selections) {
                     const text = editor.document.getText(selection);
-                    const output = makeRadio(text);
+                    const output = makeCheckbox(text);
                     editBuilder.replace(selection, output);
                 }
             });

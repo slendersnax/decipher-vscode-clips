@@ -10,7 +10,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand: decipher.makeRadio"
+    "onCommand: decipher.makeRadio",
+    "onCommand: decipher.makeCheckbox"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -39,6 +40,10 @@
       {
         "command": "decipher.makeRadio",
         "title": "Decipher: Make Radio"
+      },
+      {
+        "command": "decipher.makeCheckbox",
+        "title": "Decipher: Make Checkbox"
       }
     ],
     "snippets": [
