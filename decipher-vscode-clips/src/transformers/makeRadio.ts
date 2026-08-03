@@ -23,7 +23,7 @@ export function makeRadio(text: string): string {
     let comment = "";
 
     if (!input.includes("<comment>")) {
-        if ((input.includes("<row>")) && (input.includes("<col>"))) {
+        if ((input.includes("<row")) && (input.includes("<col"))) {
             comment = "<comment>Select one in each row</comment>\n";
         }
         else {

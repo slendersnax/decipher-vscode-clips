@@ -16,7 +16,25 @@
     "onCommand: decipher.makeTextarea",
     "onCommand: decipher.makeText",
     "onCommand: decipher.makeNumber",
-    "onCommand: decipher.makePipe"
+    "onCommand: decipher.makePipe",
+    "onCommand: decipher.makeRows",
+    "onCommand: decipher.makeRowsWithValues",
+    "onCommand: decipher.makeRowsMatchingLabels",
+    "onCommand: decipher.makeRowsMatchingValues",
+    "onCommand: decipher.makeRowsReverse",
+    "onCommand: decipher.makeRowsWithValuesReverse",
+    "onCommand: decipher.makeCols",
+    "onCommand: decipher.makeColsWithValues",
+    "onCommand: decipher.makeColsMatchingLabels",
+    "onCommand: decipher.makeColsMatchingValues",
+    "onCommand: decipher.makeColsReverse",
+    "onCommand: decipher.makeColsWithValuesReverse",
+    "onCommand: decipher.makeChoices",
+    "onCommand: decipher.makeChoicesWithValues",
+    "onCommand: decipher.makeChoicesMatchingLabels",
+    "onCommand: decipher.makeChoicesMatchingValues",
+    "onCommand: decipher.makeChoicesReverse",
+    "onCommand: decipher.makeChoicesWithValuesReverse"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -73,6 +91,78 @@
       {
         "command": "decipher.makePipe",
         "title": "Decipher: Make Pipe"
+      },
+      {
+        "command": "decipher.makeRows",
+        "title": "Decipher: Make Rows"
+      },
+      {
+        "command": "decipher.makeRowsWithValues",
+        "title": "Decipher: Make Rows with Values"
+      },
+      {
+        "command": "decipher.makeRowsMatchingLabels",
+        "title": "Decipher: Make Rows with Labels from text"
+      },
+      {
+        "command": "decipher.makeRowsMatchingValues",
+        "title": "Decipher: Make Rows with Labels and Values from text"
+      },
+      {
+        "command": "decipher.makeRowsReverse",
+        "title": "Decipher: Make Rows with Labels Reversed"
+      },
+      {
+        "command": "decipher.makeRowsWithValuesReverse",
+        "title": "Decipher: Make Rows with Labels and Values Reversed"
+      },
+      {
+        "command": "decipher.makeCols",
+        "title": "Decipher: Make Cols"
+      },
+      {
+        "command": "decipher.makeColsWithValues",
+        "title": "Decipher: Make Cols with Values"
+      },
+      {
+        "command": "decipher.makeColsMatchingLabels",
+        "title": "Decipher: Make Cols with Labels from text"
+      },
+      {
+        "command": "decipher.makeColsMatchingValues",
+        "title": "Decipher: Make Cols with Labels and Values from text"
+      },
+      {
+        "command": "decipher.makeColsReverse",
+        "title": "Decipher: Make Cols with Labels Reversed"
+      },
+      {
+        "command": "decipher.makeColsWithValuesReverse",
+        "title": "Decipher: Make Cols with Labels and Values Reversed"
+      },
+      {
+        "command": "decipher.makeChoices",
+        "title": "Decipher: Make Choices"
+      },
+      {
+        "command": "decipher.makeChoicesWithValues",
+        "title": "Decipher: Make Choices with Values"
+      },
+      {
+        "command": "decipher.makeChoicesMatchingLabels",
+        "title": "Decipher: Make Choices with Labels from text"
+      },
+      {
+        "command": "decipher.makeChoicesMatchingValues",
+        "title": "Decipher: Make Choices with Labels and Values from text"
+      },
+      {
+        "command": "decipher.makeChoicesReverse",
+        "title": "Decipher: Make Choices with Labels Reversed"
+      },
+      {
+        "command": "decipher.makeChoicesWithValuesReverse",
+        "title": "Decipher: Make Choices with Labels and Values Reversed"
       }
     ],
     "snippets": [
@@ -85,6 +175,101 @@
       {
         "command": "editor.action.insertSnippet",
         "key": "ctrl+alt+p",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeRadio",
+        "key": "ctrl+r",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeCheckbox",
+        "key": "ctrl+shift+c",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeSelect",
+        "key": "ctrl+shift+s",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeText",
+        "key": "ctrl+t",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeTextarea",
+        "key": "ctrl+shift+t",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeNumber",
+        "key": "ctrl+n",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makePipe",
+        "key": "ctrl+p",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeRows",
+        "key": "ctrl+1",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeRowsWithValues",
+        "key": "ctrl+shift+1",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeRowsMatchingLabels",
+        "key": "ctrl+9",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeRowsMatchingValues",
+        "key": "ctrl+shift+9",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeCols",
+        "key": "ctrl+2",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeColsWithValues",
+        "key": "ctrl+shift+2",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeColsMatchingLabels",
+        "key": "ctrl+8",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeColsMatchingValues",
+        "key": "ctrl+shift+8",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeChoices",
+        "key": "ctrl+3",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeChoicesWithValues",
+        "key": "ctrl+shift+3",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeChoicesMatchingLabels",
+        "key": "ctrl+7",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeChoicesMatchingValues",
+        "key": "ctrl+shift+7",
         "when": "editorTextFocus && editorLangId == 'decipher-xml'"
       }
     ],
