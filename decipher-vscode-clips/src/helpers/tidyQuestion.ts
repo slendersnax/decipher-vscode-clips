@@ -3,6 +3,17 @@ import { QuestionInput } from "../types/QuestionInput";
 export function tidyQuestionInput(input: string): QuestionInput {
     input = input.trim();
 
+    if (input == "") {
+        let label = "";
+        let title = "";
+
+        return {
+            input,
+            label,
+            title
+        };
+    }
+
     // Convert 1.2 -> 1_2
     input = input.replace(/^(\w?\d+)\.(\d+)/, "$1_$2");
 
@@ -42,7 +53,8 @@ export function tidyQuestionInput(input: string): QuestionInput {
             "<comment",
             "<group",
             "<net",
-            "<exec"
+            "<exec",
+            "<case"
         ];
 
         const indices = tags

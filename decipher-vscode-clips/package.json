@@ -13,7 +13,10 @@
     "onCommand: decipher.makeRadio",
     "onCommand: decipher.makeCheckbox",
     "onCommand: decipher.makeSelect",
-    "onCommand: decipher.makeTextarea"
+    "onCommand: decipher.makeTextarea",
+    "onCommand: decipher.makeText",
+    "onCommand: decipher.makeNumber",
+    "onCommand: decipher.makePipe"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -66,6 +69,10 @@
       {
         "command": "decipher.makeNumber",
         "title": "Decipher: Make Number"
+      },
+      {
+        "command": "decipher.makePipe",
+        "title": "Decipher: Make Pipe"
       }
     ],
     "snippets": [

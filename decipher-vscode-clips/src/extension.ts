@@ -7,6 +7,7 @@ import { registerMakeSelect } from "./commands/makeSelect";
 import { registerMakeTextarea } from "./commands/makeTextarea";
 import { registerMakeText } from "./commands/makeText";
 import { registerMakeNumber } from "./commands/makeNumber";
+import { registerMakePipe } from "./commands/makePipe";
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -33,6 +34,7 @@ export function activate(context: vscode.ExtensionContext) {
 	registerMakeTextarea(context);
 	registerMakeText(context);
 	registerMakeNumber(context);
+	registerMakePipe(context);
 
 	// context.subscriptions.push(disposable);
 }
