@@ -18,7 +18,6 @@ export function makeCheckbox(text: string): string {
         if (!outputSpl[oi].includes(noAns)) {
             for (let ei = 0; ei < excl_array.length; ei ++) {
                 if (outputSpl[oi].includes(excl_array[ei])) {
-                    console.log("found exclusive");
                     let newOutput = outputSpl[oi].replace(excl_array[ei], ` exclusive="1" randomize="0"${excl_array[ei]}`);
                     
                     outputSpl[oi] = newOutput;

@@ -3,6 +3,8 @@
 import * as vscode from "vscode";
 import { registerMakeRadio } from "./commands/makeRadio";
 import { registerMakeCheckbox } from "./commands/makeCheckbox";
+import { registerMakeSelect } from "./commands/makeSelect";
+import { registerMakeTextarea } from "./commands/makeTextarea";
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -25,6 +27,8 @@ export function activate(context: vscode.ExtensionContext) {
 
 	registerMakeRadio(context);
 	registerMakeCheckbox(context);
+	registerMakeSelect(context);
+	registerMakeTextarea(context);
 
 	// context.subscriptions.push(disposable);
 }

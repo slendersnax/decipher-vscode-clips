@@ -11,7 +11,9 @@
   ],
   "activationEvents": [
     "onCommand: decipher.makeRadio",
-    "onCommand: decipher.makeCheckbox"
+    "onCommand: decipher.makeCheckbox",
+    "onCommand: decipher.makeSelect",
+    "onCommand: decipher.makeTextarea"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -44,6 +46,19 @@
       {
         "command": "decipher.makeCheckbox",
         "title": "Decipher: Make Checkbox"
+      },
+      {
+        "command": "decipher.makeSelect",
+        "title": "Decipher: Make Select"
+      }
+      ,
+      {
+        "command": "decipher.makeSelect",
+        "title": "Decipher: Make Select"
+      },
+      {
+        "command": "decipher.makeTextarea",
+        "title": "Decipher: Make Textarea"
       }
     ],
     "snippets": [
