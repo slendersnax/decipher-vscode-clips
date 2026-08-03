@@ -20,9 +20,8 @@
     "languages": [
       {
         "id": "decipher-xml",
-        "aliases": [
-          "Decipher XML"
-        ]
+        "aliases": ["Decipher XML"],
+        "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
@@ -59,6 +58,14 @@
       {
         "command": "decipher.makeTextarea",
         "title": "Decipher: Make Textarea"
+      },
+      {
+        "command": "decipher.makeText",
+        "title": "Decipher: Make Text"
+      },
+      {
+        "command": "decipher.makeNumber",
+        "title": "Decipher: Make Number"
       }
     ],
     "snippets": [
@@ -73,7 +80,15 @@
         "key": "ctrl+alt+p",
         "when": "editorTextFocus && editorLangId == 'decipher-xml'"
       }
-    ]
+    ],
+    "configurationDefaults": {
+      "[decipher-xml]": {
+        "editor.autoClosingQuotes": "always",
+        "editor.insertSpaces": true,
+        "editor.renderLineHighlight": "all",
+        "editor.wordWrap": "on"
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

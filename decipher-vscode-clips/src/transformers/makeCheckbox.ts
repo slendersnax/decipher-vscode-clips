@@ -31,14 +31,13 @@ export function makeCheckbox(text: string): string {
     let output = outputSpl.join("\n");
 
     if (!input.includes("<comment>")) {
-        let comment = "<comment>Select all that apply</comment>\n";
-    
         return `
 <checkbox 
   label="${label}"
   atleast="1">
   <title>${title}</title>
-  ${comment}
+  <comment>Select all that apply</comment>
+
   ${output}
 </checkbox>
 <suspend/>

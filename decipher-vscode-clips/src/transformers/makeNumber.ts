@@ -1,6 +1,6 @@
 import { tidyQuestionInput } from "../helpers/tidyQuestion";
 
-export function makeTextarea(text: string): string {
+export function makeNumber(text: string): string {
     const question = tidyQuestionInput(text);
 
     let input = question.input;
@@ -10,35 +10,38 @@ export function makeTextarea(text: string): string {
     // checking if we only have label and title
     if (input.trim() == "") {
         return `
-<textarea 
+<number 
   label="${label}"
+  size="3"
   optional="0">
   <title>${title}</title>
-</textarea>
+</number>
 <suspend/>`.trim();
     }
 
     if (!input.includes("<comment>")) {
         return `
-<textarea 
+<number 
   label="${label}"
+  size="3"
   optional="0">
   <title>${title}</title>
-  <comment>Please be as specific as possible</comment>
+  <comment>Please enter a whole number</comment>
 
   ${input}
-</textarea>
+</number>
 <suspend/>
 `.trim();
     }
     else {
         return `
-<textarea 
+<number 
   label="${label}"
+  size="3"
   optional="0">
   <title>${title}</title>
   ${input}
-</textarea>
+</number>
 <suspend/>
 `.trim();
     }
