@@ -14,14 +14,13 @@ export function makeItems(text: string, options: ItemOptions): string {
 
     for (let li = 0; li < lines.length; li ++) {
         let label, text, value, extra = "";
-        
-        let parsedLine: ParsedItem = parseLine(lines[li]);
-        
-        text = parsedLine.text;
 
         if (options.createLabels) {
+            let parsedLine: ParsedItem = parseLine(lines[li]);
+            
             label = parsedLine.label;
             value = parsedLine.label;
+            text = parsedLine.text;
 
             // if it isn't already 'r1', 'c99', etc.
             if (isNumericLabel(parsedLine)) {
@@ -31,7 +30,11 @@ export function makeItems(text: string, options: ItemOptions): string {
         else {
             label = `${prefix}${li + 1}`;
             value = `${li + 1}`;
+            text = lines[li];
         }
+
+        // removing pesky Word formatting
+        text.trim();
 
         if (text.toLowerCase().includes("other") && text.toLowerCase().includes("specify")) {
             extra = ` open="1" openSize="25" randomize="0"`;
