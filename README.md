@@ -17,62 +17,81 @@ The currently available commands can be seen below. These can also be found via 
 
     
 - Insert Snippet / Open Snippet dropdown
-- keyboard shortcut: `ctrl+alt+p`
+    - keyboard shortcut: `ctrl+alt+p`
     - for a full list of snippets and the prefixes that trigger them check the `snippets/decipher-xml.code-snippets` file
-      
+
+
 - Make Radio question
-- keyboard shortcut: `ctrl+r`
-      
+    - keyboard shortcut: `ctrl+r`
+
+
 - Make Checkbox question
-- keyboard shortcut: `ctrl+shift+c`
-      
+    - keyboard shortcut: `ctrl+shift+c`
+
+
 - Make Select / Dropdown question
-- keyboard shortcut: `ctrl+shift+s`
-      
+    - keyboard shortcut: `ctrl+shift+s`
+
+
 - Make Text / OE question
-- keyboard shortcut: `ctrl+t`
+    - keyboard shortcut: `ctrl+t`
       
+
 - Make Textarea / Large OE question
-- keyboard shortcut: `ctrl+shift+t`
-      
+    - keyboard shortcut: `ctrl+shift+t`
+
+
 - Make Number question
-- keyboard shortcut: `ctrl+n`
+    - keyboard shortcut: `ctrl+n`
       
+
 - Make Pipe
-- keyboard shortcut: `ctrl+p`
-      
+    - keyboard shortcut: `ctrl+p`
+
+
 - Make Rows - only labels, automatically added based on the number of lines selected
-- keyboard shortcut: `ctrl+1`
+    - keyboard shortcut: `ctrl+1`
       
+
 - Make RowsWithValues - labels and values, automatically added based on the number of lines selected
-- keyboard shortcut: `ctrl+shift+1`
+    - keyboard shortcut: `ctrl+shift+1`
       
+
 - Make RowsMatchingLabels - only labels, parsed from the line (e.g. 99. None of the above -> `<row label="r99">None of the above</row>`)
-- keyboard shortcut: `ctrl+9`
+    - keyboard shortcut: `ctrl+9`
       
+
 - Make RowsMatchingValues - labels and values, parsed from the line
-- keyboard shortcut: `ctrl+shift+9`
+    - keyboard shortcut: `ctrl+shift+9`
       
+
 - Make Cols - only labels, automatically added based on the number of lines selected
-- keyboard shortcut: `ctrl+2`
+    - keyboard shortcut: `ctrl+2`
       
+
 - Make ColsWithValues - labels and values, automatically added based on the number of lines selected
-- keyboard shortcut: `ctrl+shift+2`
+    - keyboard shortcut: `ctrl+shift+2`
       
+
 - Make ColsMatchingLabels - only labels, parsed from the line
-- keyboard shortcut: `ctrl+8`
+    - keyboard shortcut: `ctrl+8`
       
+
 - Make ColsMatchingValues - labels and values, parsed from the line
-- keyboard shortcut: `ctrl+shift+8`
+    - keyboard shortcut: `ctrl+shift+8`
       
+
 - Make Choices - only labels, automatically added based on the number of lines selected
-- keyboard shortcut: `ctrl+3`
+    - keyboard shortcut: `ctrl+3`
       
+
 - Make ChoicesWithValues - labels and values, automatically added based on the number of lines selected
-- keyboard shortcut: `ctrl+shift+3`
+    - keyboard shortcut: `ctrl+shift+3`
       
+
 - Make ChoicesMatchingLabels - only labels, parsed from the line
-- keyboard shortcut: `ctrl+7`
+    - keyboard shortcut: `ctrl+7`
       
+
 - Make ChoicesMatchingValues - labels and values, parsed from the line
-- keyboard shortcut: `ctrl+shift+7`
+    - keyboard shortcut: `ctrl+shift+7`
