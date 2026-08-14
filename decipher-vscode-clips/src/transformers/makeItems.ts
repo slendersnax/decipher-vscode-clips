@@ -34,7 +34,7 @@ export function makeItems(text: string, options: ItemOptions): string {
         }
 
         // removing pesky Word formatting
-        text.trim();
+        text = text.trim();
 
         if (text.toLowerCase().includes("other") && text.toLowerCase().includes("specify")) {
             extra = ` open="1" openSize="25" randomize="0"`;
