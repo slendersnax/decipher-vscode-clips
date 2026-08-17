@@ -7,7 +7,8 @@ export function makePipe(text: string): string {
     let label = question.label.trim();
     let title = question.title.trim();
 
-    return `
+    if (title.trim() == "") {
+      return `
 <pipe 
   label="${label}"
   capture="">
@@ -16,4 +17,17 @@ export function makePipe(text: string): string {
 </pipe>
 <suspend/>
 `.trim();
+    }
+    else {
+      return `
+<pipe 
+  label="${label}"
+  title="${title}"
+  capture="">
+  ${input}
+  <case label="c99" cond="1"></case>
+</pipe>
+<suspend/>
+`.trim();
+    }
 }
