@@ -8,6 +8,7 @@ import { registerMakeTextarea } from "./commands/makeTextarea";
 import { registerMakeText } from "./commands/makeText";
 import { registerMakeNumber } from "./commands/makeNumber";
 import { registerMakePipe } from "./commands/makePipe";
+import { registerMakeComment } from "./commands/makeComment";
 import { registerItemCommands } from "./commands/makeItems";
 
 export function activate(context: vscode.ExtensionContext) {
@@ -18,6 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
 	registerMakeText(context);
 	registerMakeNumber(context);
 	registerMakePipe(context);
+	registerMakeComment(context);
 	registerItemCommands(context);
 }
 

@@ -17,6 +17,7 @@
     "onCommand: decipher.makeText",
     "onCommand: decipher.makeNumber",
     "onCommand: decipher.makePipe",
+    "onCommand: decipher.makeComment",
     "onCommand: decipher.makeRows",
     "onCommand: decipher.makeRowsWithValues",
     "onCommand: decipher.makeRowsMatchingLabels",
@@ -96,6 +97,10 @@
       {
         "command": "decipher.makePipe",
         "title": "Decipher: Make Pipe"
+      },
+      {
+        "command": "decipher.makeComment",
+        "title": "Decipher: Make Comment"
       },
       {
         "command": "decipher.makeRows",
@@ -231,6 +236,11 @@
       {
         "command": "decipher.makePipe",
         "key": "ctrl+p",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeComment",
+        "key": "ctrl+shift+h",
         "when": "editorTextFocus && editorLangId == 'decipher-xml'"
       },
       {
