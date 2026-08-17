@@ -322,6 +322,33 @@
         "command": "decipher.makeGroupsMatchingLabels",
         "key": "ctrl+shift+5",
         "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "editor.action.insertSnippet",
+        "key": "shift+alt+b",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "args": {
+          "langId": "decipher-xml",
+          "name": "BoldText"
+        }
+      },
+      {
+        "command": "editor.action.insertSnippet",
+        "key": "shift+alt+i",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "args": {
+          "langId": "decipher-xml",
+          "name": "ItalicText"
+        }
+      },
+      {
+        "command": "editor.action.insertSnippet",
+        "key": "shift+alt+u",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "args": {
+          "langId": "decipher-xml",
+          "name": "UnderlineText"
+        }
       }
     ],
     "configurationDefaults": {

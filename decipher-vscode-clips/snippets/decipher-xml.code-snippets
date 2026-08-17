@@ -146,6 +146,13 @@
     ],
     "description": "Insert"
   },
+  "ItalicText": {
+    "prefix": "italic",
+    "body": [
+      "<i>${0:$TM_SELECTED_TEXT}</i>"
+    ],
+    "description": "ItalicizeText"
+  },
   "JS_StyleTag": {
     "prefix": "js",
     "body": [
