@@ -49,6 +49,10 @@ The currently available commands can be seen below. These can also be found via 
     - keyboard shortcut: `ctrl+p`
 
 
+- Make Comment element (`<html>`)
+    - keyboard shortcut: `ctrl+shift+h`
+
+
 - Make Rows - only labels, automatically added based on the number of lines selected
     - keyboard shortcut: `ctrl+1`
       
@@ -95,3 +99,29 @@ The currently available commands can be seen below. These can also be found via 
 
 - Make ChoicesMatchingValues - labels and values, parsed from the line
     - keyboard shortcut: `ctrl+shift+7`
+
+
+- Make Cases - only labels, automatically added based on the number of lines selected
+    - keyboard shortcut: `ctrl+4`
+
+
+- Make CasesMatchingLabels - labels, parsed from the line
+    - keyboard shortcut: `ctrl+shift+4`
+
+
+- Make Groups - only labels, automatically added based on the number of lines selected
+    - keyboard shortcut: `ctrl+5`
+
+
+- Make GroupsMatchingLabels - labels, parsed from the line
+    - keyboard shortcut: `ctrl+shift+5`
+
+
+- Bold selected text (from snippet)
+    - keyboard shortcut: `shift+alt+b`
+
+- Italicize selected text (from snippet)
+    - keyboard shortcut: `shift+alt+i`
+
+- Underline selected text (from snippet)
+    - keyboard shortcut: `shift+alt+u`
