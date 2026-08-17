@@ -168,6 +168,42 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
                 reverse: true
             }
         },
+        {
+            id: "decipher.makeCases",
+            options: {
+                tag: "case",
+                createLabels: false,
+                createValues: false,
+                reverse: false
+            }
+        },
+        {
+            id: "decipher.makeCasesMatchingLabels",
+            options: {
+                tag: "case",
+                createLabels: true,
+                createValues: false,
+                reverse: false
+            }
+        },
+        {
+            id: "decipher.makeGroups",
+            options: {
+                tag: "group",
+                createLabels: false,
+                createValues: false,
+                reverse: false
+            }
+        },
+        {
+            id: "decipher.makeGroupsMatchingLabels",
+            options: {
+                tag: "group",
+                createLabels: true,
+                createValues: false,
+                reverse: false
+            }
+        },
     ];
 
     for (const command of commands) {

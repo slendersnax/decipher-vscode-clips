@@ -2,7 +2,7 @@
   "name": "decipher-vscode-clips",
   "displayName": "decipher-vscode-clips",
   "description": "Decipher snippets and commands for VS Code",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.100.0"
   },
@@ -34,7 +34,11 @@
     "onCommand: decipher.makeChoicesMatchingLabels",
     "onCommand: decipher.makeChoicesMatchingValues",
     "onCommand: decipher.makeChoicesReverse",
-    "onCommand: decipher.makeChoicesWithValuesReverse"
+    "onCommand: decipher.makeChoicesWithValuesReverse",
+    "onCommand: decipher.makeCases",
+    "onCommand: decipher.makeCasesMatchingLabels",
+    "onCommand: decipher.makeGroups",
+    "onCommand: decipher.makeGroupsMatchingLabels"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -164,6 +168,22 @@
       {
         "command": "decipher.makeChoicesWithValuesReverse",
         "title": "Decipher: Make Choices with Labels and Values Reversed"
+      },
+      {
+        "command": "decipher.makeCases",
+        "title": "Decipher: Make Cases (for Pipe)"
+      },
+      {
+        "command": "decipher.makeCasesMatchingLabels",
+        "title": "Decipher: Make Cases (for Pipe) with Labels from text"
+      },
+      {
+        "command": "decipher.makeGroups",
+        "title": "Decipher: Make Groups"
+      },
+      {
+        "command": "decipher.makeGroupsMatchingLabels",
+        "title": "Decipher: Make Groups with Labels from text"
       }
     ],
     "snippets": [
@@ -271,6 +291,26 @@
       {
         "command": "decipher.makeChoicesMatchingValues",
         "key": "ctrl+shift+7",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeCases",
+        "key": "ctrl+4",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeCasesMatchingLabels",
+        "key": "ctrl+shift+4",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeGroups",
+        "key": "ctrl+5",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "decipher.makeGroupsMatchingLabels",
+        "key": "ctrl+shift+5",
         "when": "editorTextFocus && editorLangId == 'decipher-xml'"
       }
     ],

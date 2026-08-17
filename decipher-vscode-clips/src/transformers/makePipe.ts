@@ -12,6 +12,7 @@ export function makePipe(text: string): string {
   label="${label}"
   capture="">
   ${input}
+  <case label="c99" cond="1"></case>
 </pipe>
 <suspend/>
 `.trim();

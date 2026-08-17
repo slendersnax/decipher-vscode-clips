@@ -9,7 +9,9 @@ export function makeItems(text: string, options: ItemOptions): string {
     const prefix = {
         row: "r",
         col: "c",
-        choice: "ch"
+        choice: "ch",
+        case: "c",
+        group: "g"
     }[options.tag];
 
     for (let li = 0; li < lines.length; li ++) {
