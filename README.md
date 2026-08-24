@@ -52,6 +52,8 @@ The currently available commands can be seen below. These can also be found via 
 - Make Comment element (`<html>`)
     - keyboard shortcut: `ctrl+shift+h`
 
+- Make Resp. info element (`<comment>`)
+    - keyboard shortcut: `ctrl+alt+c`
 
 - Make Rows - only labels, automatically added based on the number of lines selected
     - keyboard shortcut: `ctrl+1`
