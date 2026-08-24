@@ -36,7 +36,7 @@
       "  <style>",
       "    ${0}",
       "  </style>",
-      "]]${-1}></style>"
+      "]]></style>"
     ],
     "description": "CSS_StyleTag"
   },
@@ -56,7 +56,7 @@
     "body": [
       "<style name=\"question.left-blank-legend\"><![CDATA[",
       "<\\$(tag) class=\"cell empty empty-left empty-\\$(pos) unused \\${\"desktop\" if this.grouping.cols else \"mobile\"} border-collapse\"></\\$(tag)>",
-      "]]${-1}></style>"
+      "]]></style>"
     ],
     "description": "ColEmpty"
   },
@@ -96,7 +96,7 @@
       ".answers { display: none !important; }",
       "</style>",
       "\\@endif",
-      "]]${-1}></style>"
+      "]]></style>"
     ],
     "description": "DQQACodes"
   },
@@ -160,7 +160,7 @@
       "  <script>",
       "  ${0}",
       "  </script>",
-      "]]${-1}></style>"
+      "]]></style>"
     ],
     "description": "JS_StyleTag"
   },
@@ -185,7 +185,7 @@
     "body": [
       "<style name='question.left-blank-legend'> <![CDATA[",
       "<\\$(tag) class=\"cell nonempty legend col-legend-top col-legend-basic \\${\"desktop\" if this.grouping.cols else \"mobile\"} border-collapse\">${0:Res}</\\$(tag)>",
-      "]]${-1}></style>"
+      "]]></style>"
     ],
     "description": "LeftBlankLegend"
   },
@@ -238,7 +238,7 @@
       "  <style>",
       "    ${0}",
       "  </style>",
-      "]]${-1}></style>"
+      "]]></style>"
     ],
     "description": "PageHeadStyle"
   },
@@ -252,9 +252,18 @@
   "QuestionAfterStyleTag": {
     "prefix": "question.after",
     "body": [
+      "<style name=\"question.after\"><![CDATA[",
+      "${0}",
+      "]]></style>"
+    ],
+    "description": "QuestionAfterStyleTag"
+  },
+  "QuestionAfterWrapReadyStyleTag": {
+    "prefix": "question.after.wrap",
+    "body": [
       "<style name=\"question.after\" wrap=\"ready\"><![CDATA[",
       "${0}",
-      "]]${-1}></style>"
+      "]]></style>"
     ],
     "description": "QuestionAfterStyleTag"
   },

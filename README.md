@@ -42,7 +42,7 @@ The currently available commands can be seen below. These can also be found via 
 
 
 - Make Number question
-    - keyboard shortcut: `ctrl+n`
+    - keyboard shortcut: `ctrl+shift+n`
       
 
 - Make Pipe

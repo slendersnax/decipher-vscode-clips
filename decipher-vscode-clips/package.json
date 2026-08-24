@@ -2,7 +2,7 @@
   "name": "decipher-vscode-clips",
   "displayName": "decipher-vscode-clips",
   "description": "Decipher snippets and commands for VS Code",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.100.0"
   },
@@ -230,7 +230,7 @@
       },
       {
         "command": "decipher.makeNumber",
-        "key": "ctrl+n",
+        "key": "ctrl+shift+n",
         "when": "editorTextFocus && editorLangId == 'decipher-xml'"
       },
       {
@@ -242,6 +242,15 @@
         "command": "decipher.makeComment",
         "key": "ctrl+shift+h",
         "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
+        "command": "editor.action.insertSnippet",
+        "key": "ctrl+alt+c",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "args": {
+          "langId": "decipher-xml",
+          "name": "Comment"
+        }
       },
       {
         "command": "decipher.makeRows",

@@ -7,11 +7,14 @@
     { "include": "#pythonValidateCell" },
     { "include": "#pythonValidateRow" },
     { "include": "#pythonValidateCol" },
-    { "include": "#htmlBlock" },
+    
     { "include": "#jsCdataStyle" },
+    { "include": "#jsWrapReadyStyle" },
     { "include": "#jsEscapedScript" },
     { "include": "#cssCdataStyle" },
     { "include": "#cssEscapedStyle" },
+
+    { "include": "#htmlBlock" },
     { "include": "text.xml" }
   ],
   "repository": {
@@ -141,6 +144,26 @@
         "2": { "name": "punctuation.definition.tag.begin.xml" },
         "3": { "name": "entity.name.tag.xml" },
         "4": { "name": "punctuation.definition.tag.end.xml" }
+      },
+      "contentName": "source.js",
+      "patterns": [{ "include": "source.js" }]
+    },
+
+    "jsWrapReadyStyle": {
+      "name": "meta.embedded.block.javascript.wrapready.decipher-xml",
+      "begin": "(<)(style)(?=[^>]*\\bwrap\\s*=\\s*[\"']ready[\"'])(\\b[^>]*)(>\\s*<!\\[CDATA\\[)",
+      "end": "(\\]\\]>\\s*)(</)(style)(>)",
+      "beginCaptures": {
+          "1": { "name": "punctuation.definition.tag.begin.xml" },
+          "2": { "name": "entity.name.tag.xml" },
+          "3": { "name": "meta.tag.attributes.xml" },
+          "4": { "name": "meta.tag.cdata.begin.xml" }
+      },
+      "endCaptures": {
+          "1": { "name": "meta.tag.cdata.end.xml" },
+          "2": { "name": "punctuation.definition.tag.begin.xml" },
+          "3": { "name": "entity.name.tag.xml" },
+          "4": { "name": "punctuation.definition.tag.end.xml" }
       },
       "contentName": "source.js",
       "patterns": [{ "include": "source.js" }]
