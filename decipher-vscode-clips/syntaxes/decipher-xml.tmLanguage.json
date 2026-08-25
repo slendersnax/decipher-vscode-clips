@@ -8,10 +8,8 @@
     { "include": "#pythonValidateRow" },
     { "include": "#pythonValidateCol" },
     
-    { "include": "#jsCdataStyle" },
     { "include": "#jsWrapReadyStyle" },
     { "include": "#jsEscapedScript" },
-    { "include": "#cssCdataStyle" },
     { "include": "#cssEscapedStyle" },
 
     { "include": "#htmlBlock" },
