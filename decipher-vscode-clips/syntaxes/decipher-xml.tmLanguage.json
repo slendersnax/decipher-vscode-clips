@@ -15,8 +15,6 @@
 
     { "include": "#jsEscapedScript" },
     { "include": "#cssEscapedStyle" },
-
-    { "include": "#inlinePython" },
     { "include": "text.xml" }
   ],
   "repository": {
@@ -130,24 +128,6 @@
       "patterns": [{ "include": "source.python" }]
     },
 
-    "inlinePython": {
-      "name": "meta.embedded.inline.python.decipher-xml",
-      "begin": "(\\$\\{)",
-      "end": "(\\})",
-      "beginCaptures": {
-        "1": {
-          "name": "punctuation.section.embedded.begin.decipher-xml"
-        }
-      },
-      "endCaptures": {
-        "1": {
-          "name": "punctuation.section.embedded.end.decipher-xml"
-        }
-      },
-      "contentName": "source.python",
-      "patterns": [{ "include": "source.python" }]
-    },
-
     "htmlBlock": {
       "name": "meta.embedded.block.html.decipher-xml",
       "begin": "(<)(style)(\\b[^>]*)(>\\s*<!\\[CDATA\\[)",
@@ -166,7 +146,6 @@
       },
       "contentName": "text.html.basic",
       "patterns": [
-        { "include": "#inlinePython" },
         { "include": "text.html.basic" }
       ]
     },
@@ -189,7 +168,6 @@
       },
       "contentName": "source.js",
       "patterns": [
-        { "include": "#inlinePython" },
         { "include": "source.js" }
       ]
     },
@@ -212,7 +190,6 @@
       },
       "contentName": "source.js",
       "patterns": [
-        { "include": "#inlinePython" },
         { "include": "source.js" }
       ]
     },
@@ -235,7 +212,6 @@
       },
       "contentName": "source.css",
       "patterns": [
-        { "include": "#inlinePython" },
         { "include": "source.css" }
       ]
     },
@@ -256,7 +232,6 @@
       },
       "contentName": "source.js",
       "patterns": [
-        { "include": "#inlinePython" },
         { "include": "source.js" }
       ]
     },
@@ -277,7 +252,6 @@
       },
       "contentName": "source.css",
       "patterns": [
-        { "include": "#inlinePython" },
         { "include": "source.css" }
       ]
     }
