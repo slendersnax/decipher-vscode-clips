@@ -10,6 +10,7 @@ import { registerMakeNumber } from "./commands/makeNumber";
 import { registerMakePipe } from "./commands/makePipe";
 import { registerMakeComment } from "./commands/makeComment";
 import { registerItemCommands } from "./commands/makeItems";
+import { registerSwitchCommands } from "./commands/makeSwitch";
 
 export function activate(context: vscode.ExtensionContext) {
 	registerMakeRadio(context);
@@ -21,6 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
 	registerMakePipe(context);
 	registerMakeComment(context);
 	registerItemCommands(context);
+	registerSwitchCommands(context);
 }
 
 export function deactivate() {}

@@ -1,7 +1,6 @@
 import * as vscode from "vscode";
 
 import { makeItems } from "../transformers/makeItems";
-import { ItemOptions } from "../types/ItemOptions";
 import { ItemCommand } from "../types/ItemCommand";
 
 export function registerItemCommands(context: vscode.ExtensionContext) {

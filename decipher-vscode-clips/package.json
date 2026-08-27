@@ -2,7 +2,7 @@
   "name": "decipher-vscode-clips",
   "displayName": "decipher-vscode-clips",
   "description": "Decipher snippets and commands for VS Code",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.100.0"
   },
@@ -39,7 +39,17 @@
     "onCommand: decipher.makeCases",
     "onCommand: decipher.makeCasesMatchingLabels",
     "onCommand: decipher.makeGroups",
-    "onCommand: decipher.makeGroupsMatchingLabels"
+    "onCommand: decipher.makeGroupsMatchingLabels",
+    "onCommand: decipher.switchRowsCols",
+    "onCommand: decipher.switchRowsChoices",
+    "onCommand: decipher.switchRowsCases",
+    "onCommand: decipher.switchRowsGroups",
+    "onCommand: decipher.switchColsChoices",
+    "onCommand: decipher.switchColsCases",
+    "onCommand: decipher.switchColsGroups",
+    "onCommand: decipher.switchChoicesCases",
+    "onCommand: decipher.switchChoicesGroups",
+    "onCommand: decipher.switchCasesGroups"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -189,6 +199,47 @@
       {
         "command": "decipher.makeGroupsMatchingLabels",
         "title": "Decipher: Make Groups with Labels from text"
+      },
+
+      {
+        "command": "decipher.switchRowsCols",
+        "title": "Decipher: Switch Rows and Cols"
+      },
+      {
+        "command": "decipher.switchRowsChoices",
+        "title": "Decipher: Switch Rows and Choices"
+      },
+      {
+        "command": "decipher.switchRowsCases",
+        "title": "Decipher: Switch Rows and Cases"
+      },
+      {
+        "command": "decipher.switchRowsGroups",
+        "title": "Decipher: Switch Rows and Groups"
+      },
+      {
+        "command": "decipher.switchColsChoices",
+        "title": "Decipher: Switch Cols and Choices"
+      },
+      {
+        "command": "decipher.switchColsCases",
+        "title": "Decipher: Switch Cols and Cases"
+      },
+      {
+        "command": "decipher.switchColsGroups",
+        "title": "Decipher: Switch Cols and Groups"
+      },
+      {
+        "command": "decipher.switchChoicesCases",
+        "title": "Decipher: Switch Choices and Cases"
+      },
+      {
+        "command": "decipher.switchChoicesGroups",
+        "title": "Decipher: Switch Choices and Groups"
+      },
+      {
+        "command": "decipher.switchCasesGroups",
+        "title": "Decipher: Switch Cases and Groups"
       }
     ],
     "snippets": [
