@@ -2,7 +2,7 @@
   "name": "decipher-vscode-clips",
   "displayName": "decipher-vscode-clips",
   "description": "Decipher snippets and commands for VS Code",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.100.0"
   },
@@ -83,10 +83,6 @@
       {
         "command": "decipher.makeCheckbox",
         "title": "Decipher: Make Checkbox"
-      },
-      {
-        "command": "decipher.makeSelect",
-        "title": "Decipher: Make Select"
       },
       {
         "command": "decipher.makeSelect",
@@ -413,9 +409,14 @@
     ],
     "configurationDefaults": {
       "[decipher-xml]": {
+        "editor.tabCompletion": "on",
+        "editor.acceptSuggestionOnEnter": "off",
+        "editor.acceptSuggestionOnCommitCharacter": false,
+        "editor.snippetSuggestions": "top",
         "editor.autoClosingQuotes": "always",
         "editor.insertSpaces": true,
         "editor.renderLineHighlight": "all",
+        "editor.stickyScroll.enabled": false,
         "editor.wordWrap": "on"
       }
     }
