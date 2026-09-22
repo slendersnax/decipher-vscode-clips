@@ -16,6 +16,8 @@ export function makeItems(text: string, options: ItemOptions): string {
     }[options.tag];
 
     for (let li = 0; li < lines.length; li ++) {
+        lines[li] = lines[li].trim();
+
         let label, text, value, extra = "";
 
         if (options.createLabels) {
