@@ -54,7 +54,9 @@ export function tidyQuestionInput(input: string): QuestionInput {
             "<group",
             "<net",
             "<exec",
-            "<case"
+            "<case",
+            "<insert",
+            "<noanswer"
         ];
 
         const indices = tags
