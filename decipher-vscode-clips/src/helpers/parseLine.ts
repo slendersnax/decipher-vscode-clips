@@ -1,21 +1,20 @@
 import { ParsedItem } from "../types/ParsedItem";
 
 export function parseLine(input: string): ParsedItem {
-    let splitLine = input.split(" ");
+    input = input.replace(/\t+/g, " ").trim();
 
-    // doing it this way because if I assign .shift() directly
-    // it complains that "iT cOuLd be UnDeFiNeD"
-    let label = "";
-    
-    if (splitLine.length > 1) {
-        label = splitLine[0].replace(".", "").replace(")", "").replace(":", "");
-        splitLine.shift();
-    }
-    else {
-        label = "";
+    // split on first whitespace
+    const match = input.match(/^(\S+)\s+(.*)$/);
+
+    if (!match) {
+        return {
+            label: "",
+            text: input
+        };
     }
 
-    let text = splitLine.join(" ");
+    const label = match[1].replace(/[.):]$/, "");
+    const text = match[2].trim();
 
     return {
         label,
