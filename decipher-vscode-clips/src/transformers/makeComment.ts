@@ -5,7 +5,7 @@ export function makeComment(text: string): string {
 
     let input = question.input;
     let label = question.label.trim();
-    let title = question.title.trim();
+    let title = question.title.trim().replace(/\n/g, "<br/>\n");
 
     // there isn't a proper title in an <html> tag so this is a workaround
     // we'll see how well it does

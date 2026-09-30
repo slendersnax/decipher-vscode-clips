@@ -8,7 +8,7 @@ export function makeRadio(text: string): string {
     let title = question.title.trim();
 
     // checking if we only have label and title
-    if (input.trim() == "") {
+    if (input.trim() === "") {
         return `
 <radio 
   label="${label}" 
