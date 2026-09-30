@@ -19,20 +19,6 @@ export function registerSwitchCommands(context: vscode.ExtensionContext) {
                 tag_2: "choice"
             }
         },
-        {
-            id: "decipher.switchRowsCases",
-            options: {
-                tag_1: "row",
-                tag_2: "case"
-            }
-        },
-        {
-            id: "decipher.switchRowsGroups",
-            options: {
-                tag_1: "row",
-                tag_2: "group"
-            }
-        },
         
         {
             id: "decipher.switchColsChoices",
@@ -40,44 +26,7 @@ export function registerSwitchCommands(context: vscode.ExtensionContext) {
                 tag_1: "col",
                 tag_2: "choice"
             }
-        },
-        {
-            id: "decipher.switchColsCases",
-            options: {
-                tag_1: "col",
-                tag_2: "case"
-            }
-        },
-        {
-            id: "decipher.switchColsGroups",
-            options: {
-                tag_1: "col",
-                tag_2: "group"
-            }
-        },
-
-        {
-            id: "decipher.switchChoicesCases",
-            options: {
-                tag_1: "choice",
-                tag_2: "case"
-            }
-        },
-        {
-            id: "decipher.switchChoicesGroups",
-            options: {
-                tag_1: "choice",
-                tag_2: "group"
-            }
-        },
-
-        {
-            id: "decipher.switchCasesGroups",
-            options: {
-                tag_1: "case",
-                tag_2: "group"
-            }
-        },
+        }
     ];
 
     for (const command of commands) {

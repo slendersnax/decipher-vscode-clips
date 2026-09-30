@@ -2,55 +2,14 @@
   "name": "decipher-vscode-clips",
   "displayName": "decipher-vscode-clips",
   "description": "Decipher snippets and commands for VS Code",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.100.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand: decipher.makeRadio",
-    "onCommand: decipher.makeCheckbox",
-    "onCommand: decipher.makeSelect",
-    "onCommand: decipher.makeTextarea",
-    "onCommand: decipher.makeText",
-    "onCommand: decipher.makeNumber",
-    "onCommand: decipher.makePipe",
-    "onCommand: decipher.makeComment",
-    "onCommand: decipher.makeRows",
-    "onCommand: decipher.makeRowsWithValues",
-    "onCommand: decipher.makeRowsMatchingLabels",
-    "onCommand: decipher.makeRowsMatchingValues",
-    "onCommand: decipher.makeRowsReverse",
-    "onCommand: decipher.makeRowsWithValuesReverse",
-    "onCommand: decipher.makeCols",
-    "onCommand: decipher.makeColsWithValues",
-    "onCommand: decipher.makeColsMatchingLabels",
-    "onCommand: decipher.makeColsMatchingValues",
-    "onCommand: decipher.makeColsReverse",
-    "onCommand: decipher.makeColsWithValuesReverse",
-    "onCommand: decipher.makeChoices",
-    "onCommand: decipher.makeChoicesWithValues",
-    "onCommand: decipher.makeChoicesMatchingLabels",
-    "onCommand: decipher.makeChoicesMatchingValues",
-    "onCommand: decipher.makeChoicesReverse",
-    "onCommand: decipher.makeChoicesWithValuesReverse",
-    "onCommand: decipher.makeCases",
-    "onCommand: decipher.makeCasesMatchingLabels",
-    "onCommand: decipher.makeGroups",
-    "onCommand: decipher.makeGroupsMatchingLabels",
-    "onCommand: decipher.switchRowsCols",
-    "onCommand: decipher.switchRowsChoices",
-    "onCommand: decipher.switchRowsCases",
-    "onCommand: decipher.switchRowsGroups",
-    "onCommand: decipher.switchColsChoices",
-    "onCommand: decipher.switchColsCases",
-    "onCommand: decipher.switchColsGroups",
-    "onCommand: decipher.switchChoicesCases",
-    "onCommand: decipher.switchChoicesGroups",
-    "onCommand: decipher.switchCasesGroups"
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "languages": [
@@ -206,36 +165,8 @@
         "title": "Decipher: Switch Rows and Choices"
       },
       {
-        "command": "decipher.switchRowsCases",
-        "title": "Decipher: Switch Rows and Cases"
-      },
-      {
-        "command": "decipher.switchRowsGroups",
-        "title": "Decipher: Switch Rows and Groups"
-      },
-      {
         "command": "decipher.switchColsChoices",
         "title": "Decipher: Switch Cols and Choices"
-      },
-      {
-        "command": "decipher.switchColsCases",
-        "title": "Decipher: Switch Cols and Cases"
-      },
-      {
-        "command": "decipher.switchColsGroups",
-        "title": "Decipher: Switch Cols and Groups"
-      },
-      {
-        "command": "decipher.switchChoicesCases",
-        "title": "Decipher: Switch Choices and Cases"
-      },
-      {
-        "command": "decipher.switchChoicesGroups",
-        "title": "Decipher: Switch Choices and Groups"
-      },
-      {
-        "command": "decipher.switchCasesGroups",
-        "title": "Decipher: Switch Cases and Groups"
       }
     ],
     "snippets": [

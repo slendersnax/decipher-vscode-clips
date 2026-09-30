@@ -7,9 +7,7 @@ export function makeSwitch(text: string, options: SwitchOptions): string {
     const prefix = {
         row: "r",
         col: "c",
-        choice: "ch",
-        case: "c",
-        group: "g"
+        choice: "ch"
     };
 
     let tag_1_start = `<${options.tag_1}`;
