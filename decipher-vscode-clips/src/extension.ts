@@ -11,6 +11,7 @@ import { registerMakePipe } from "./commands/makePipe";
 import { registerMakeComment } from "./commands/makeComment";
 import { registerItemCommands } from "./commands/makeItems";
 import { registerSwitchCommands } from "./commands/makeSwitch";
+import { registerSnippetCommands } from "./commands/snippetCommands";
 
 export function activate(context: vscode.ExtensionContext) {
 	registerMakeRadio(context);
@@ -23,6 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
 	registerMakeComment(context);
 	registerItemCommands(context);
 	registerSwitchCommands(context);
+	registerSnippetCommands(context);
 }
 
 export function deactivate() {}

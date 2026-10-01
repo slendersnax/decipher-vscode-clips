@@ -2,7 +2,7 @@
   "name": "decipher-vscode-clips",
   "displayName": "decipher-vscode-clips",
   "description": "Decipher snippets and commands for VS Code",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "engines": {
     "vscode": "^1.100.0"
   },
@@ -65,7 +65,11 @@
       },
       {
         "command": "decipher.makeComment",
-        "title": "Decipher: Make Comment"
+        "title": "Decipher: Make Comment (<html>)"
+      },
+      {
+        "command": "decipher.insertComment",
+        "title": "Decipher: Insert <comment>"
       },
       {
         "command": "decipher.makeRows",
@@ -167,6 +171,19 @@
       {
         "command": "decipher.switchColsChoices",
         "title": "Decipher: Switch Cols and Choices"
+      },
+
+      {
+        "command": "decipher.boldText",
+        "title": "Decipher: insert Bold Text"
+      },
+      {
+        "command": "decipher.italicText",
+        "title": "Decipher: insert Italic Text"
+      },
+      {
+        "command": "decipher.underlineText",
+        "title": "Decipher: insert Underline Text"
       }
     ],
     "snippets": [
@@ -179,170 +196,332 @@
       {
         "command": "editor.action.insertSnippet",
         "key": "ctrl+alt+p",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeRadio",
         "key": "ctrl+r",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeCheckbox",
         "key": "ctrl+shift+c",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeSelect",
         "key": "ctrl+shift+s",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeText",
         "key": "ctrl+t",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeTextarea",
         "key": "ctrl+shift+t",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeNumber",
         "key": "ctrl+shift+n",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makePipe",
         "key": "ctrl+p",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeComment",
         "key": "ctrl+shift+h",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
-        "command": "editor.action.insertSnippet",
+        "command": "decipher.insertComment",
         "key": "ctrl+alt+c",
         "when": "editorTextFocus && editorLangId == 'decipher-xml'",
-        "args": {
-          "langId": "decipher-xml",
-          "name": "Comment"
-        }
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeRows",
         "key": "ctrl+1",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeRowsWithValues",
         "key": "ctrl+shift+1",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeRowsMatchingLabels",
         "key": "ctrl+9",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeRowsMatchingValues",
         "key": "ctrl+shift+9",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeCols",
         "key": "ctrl+2",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeColsWithValues",
         "key": "ctrl+shift+2",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeColsMatchingLabels",
         "key": "ctrl+8",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeColsMatchingValues",
         "key": "ctrl+shift+8",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeChoices",
         "key": "ctrl+3",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeChoicesWithValues",
         "key": "ctrl+shift+3",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeChoicesMatchingLabels",
         "key": "ctrl+7",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeChoicesMatchingValues",
         "key": "ctrl+shift+7",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeCases",
         "key": "ctrl+4",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeCasesMatchingLabels",
         "key": "ctrl+shift+4",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeGroups",
         "key": "ctrl+5",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.makeGroupsMatchingLabels",
         "key": "ctrl+shift+5",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
         "command": "decipher.switchRowsCols",
         "key": "ctrl+shift+f12",
-        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'",
+        "category": "Decipher"
       },
       {
-        "command": "editor.action.insertSnippet",
+        "command": "decipher.boldText",
         "key": "shift+alt+b",
         "when": "editorTextFocus && editorLangId == 'decipher-xml'",
-        "args": {
-          "langId": "decipher-xml",
-          "name": "BoldText"
-        }
+        "category": "Decipher"
       },
       {
-        "command": "editor.action.insertSnippet",
+        "command": "decipher.italicText",
         "key": "shift+alt+i",
         "when": "editorTextFocus && editorLangId == 'decipher-xml'",
-        "args": {
-          "langId": "decipher-xml",
-          "name": "ItalicText"
-        }
+        "category": "Decipher"
       },
       {
-        "command": "editor.action.insertSnippet",
+        "command": "decipher.underlineText",
         "key": "shift+alt+u",
         "when": "editorTextFocus && editorLangId == 'decipher-xml'",
-        "args": {
-          "langId": "decipher-xml",
-          "name": "UnderlineText"
-        }
+        "category": "Decipher"
       }
     ],
+    "submenus": [
+      {
+        "id": "decipher.questionTypes",
+        "label": "Dec: Question Types"
+      },
+      {
+        "id": "decipher.elementTypes",
+        "label": "Dec: Question Elements"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "submenu": "decipher.questionTypes",
+          "when": "editorLangId == decipher-xml",
+          "group": "decipher@1"
+        },
+        {
+          "submenu": "decipher.elementTypes",
+          "when": "editorLangId == decipher-xml",
+          "group": "decipher@2"
+        }
+      ],
+      "decipher.questionTypes": [
+        {
+          "command": "decipher.makeRadio",
+          "when": "editorLangId == decipher-xml",
+          "group": "questionTypes@1"
+        },
+        {
+          "command": "decipher.makeCheckbox",
+          "when": "editorLangId == decipher-xml",
+          "group": "questionTypes@2"
+        },
+        {
+          "command": "decipher.makeSelect",
+          "when": "editorLangId == decipher-xml",
+          "group": "questionTypes@3"
+        },
+        {
+          "command": "decipher.makeText",
+          "when": "editorLangId == decipher-xml",
+          "group": "questionTypes@4"
+        },
+        {
+          "command": "decipher.makeTextarea",
+          "when": "editorLangId == decipher-xml",
+          "group": "questionTypes@5"
+        },
+        {
+          "command": "decipher.makeNumber",
+          "when": "editorLangId == decipher-xml",
+          "group": "questionTypes@6"
+        },
+        {
+          "command": "decipher.makeComment",
+          "when": "editorLangId == decipher-xml",
+          "group": "questionTypes@7"
+        },
+        {
+          "command": "decipher.makePipe",
+          "when": "editorLangId == decipher-xml",
+          "group": "questionTypes@8"
+        }
+      ],
+      "decipher.elementTypes": [
+        {
+          "command": "decipher.makeRows",
+          "when": "editorLangId == decipher-xml",
+          "group": "elementTypes@1"
+        },
+        {
+          "command": "decipher.makeRowsWithValues",
+          "when": "editorLangId == decipher-xml",
+          "group": "elementTypes@2"
+        },
+        {
+          "command": "decipher.makeCols",
+          "when": "editorLangId == decipher-xml",
+          "group": "elementTypes@3"
+        },
+        {
+          "command": "decipher.makeColsWithValues",
+          "when": "editorLangId == decipher-xml",
+          "group": "elementTypes@4"
+        },
+        {
+          "command": "decipher.makeChoices",
+          "when": "editorLangId == decipher-xml",
+          "group": "elementTypes@5"
+        },
+        {
+          "command": "decipher.makeChoicesWithValues",
+          "when": "editorLangId == decipher-xml",
+          "group": "elementTypes@6"
+        },
+        {
+          "command": "decipher.makeCases",
+          "when": "editorLangId == decipher-xml",
+          "group": "elementTypes@7"
+        },
+        {
+          "command": "decipher.makeCasesMatchingLabels",
+          "when": "editorLangId == decipher-xml",
+          "group": "elementTypes@8"
+        },
+        {
+          "command": "decipher.makeGroups",
+          "when": "editorLangId == decipher-xml",
+          "group": "elementTypes@9"
+        },
+        {
+          "command": "decipher.makeGroupsMatchingLabels",
+          "when": "editorLangId == decipher-xml",
+          "group": "elementTypes@10"
+        },
+        {
+          "command": "decipher.makeChoicesMatchingLabels",
+          "when": "editorLangId == decipher-xml",
+          "group": "elementTypes@11"
+        },
+        {
+          "command": "decipher.makeChoicesMatchingValues",
+          "when": "editorLangId == decipher-xml",
+          "group": "elementTypes@12"
+        },
+        {
+          "command": "decipher.makeColsMatchingLabels",
+          "when": "editorLangId == decipher-xml",
+          "group": "elementTypes@13"
+        },
+        {
+          "command": "decipher.makeColsMatchingValues",
+          "when": "editorLangId == decipher-xml",
+          "group": "elementTypes@14"
+        },
+        {
+          "command": "decipher.makeRowsMatchingLabels",
+          "when": "editorLangId == decipher-xml",
+          "group": "elementTypes@15"
+        },
+        {
+          "command": "decipher.makeRowsMatchingValues",
+          "when": "editorLangId == decipher-xml",
+          "group": "elementTypes@16"
+        }
+      ]
+    },
     "configurationDefaults": {
       "[decipher-xml]": {
         "editor.tabCompletion": "on",
