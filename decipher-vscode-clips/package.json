@@ -311,6 +311,11 @@
         "when": "editorTextFocus && editorLangId == 'decipher-xml'"
       },
       {
+        "command": "decipher.switchRowsCols",
+        "key": "ctrl+shift+f12",
+        "when": "editorTextFocus && editorLangId == 'decipher-xml'"
+      },
+      {
         "command": "editor.action.insertSnippet",
         "key": "shift+alt+b",
         "when": "editorTextFocus && editorLangId == 'decipher-xml'",

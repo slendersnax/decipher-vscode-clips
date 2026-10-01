@@ -15,5 +15,6 @@ export function makeComment(text: string): string {
     where="survey">
     ${title}
 </html>
+<suspend/>
 `.trim();
 }

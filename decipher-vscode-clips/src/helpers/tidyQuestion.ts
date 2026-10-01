@@ -1,4 +1,5 @@
 import { QuestionInput } from "../types/QuestionInput";
+import { fixUnicode } from "./fixUnicode";
 
 export function tidyQuestionInput(input: string): QuestionInput {
     input = input.trim();
@@ -71,6 +72,8 @@ export function tidyQuestionInput(input: string): QuestionInput {
     }
 
     input = input.replace(title, "");
+
+    title = fixUnicode(title);
 
     return {
         input,

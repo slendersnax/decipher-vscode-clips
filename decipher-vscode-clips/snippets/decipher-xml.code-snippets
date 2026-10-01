@@ -323,7 +323,7 @@
   "TermTag": {
     "prefix": "term",
     "body": [
-      "<term cond=\"${1}\">${2}</term>"
+      "<term label=\"term_${1}\" cond=\"${2}\">${3}</term>"
     ],
     "description": "TermTag"
   },
