@@ -6,9 +6,9 @@ import { parseLine } from "../helpers/parseLine";
 
 export function makeItems(selectedText: string, options: ItemOptions): string {
     let lines = fixUnicode(selectedText.trim())
+        .replace(/\n{2,}/g, "\n")
         .split("\n")
-        .map(line => line.trim())
-        .filter(line => line !== "");
+        .map(line => line.trim());
 
     const prefix = {
         row: "r",
@@ -24,8 +24,10 @@ export function makeItems(selectedText: string, options: ItemOptions): string {
 
         text = parsedLine.text;
 
-        // create label and value from line text
-        if (options.createLabels) {
+        if (options.parseLabels) {
+            const parsedLine: ParsedItem = parseLine(lines[li]);
+
+            text = parsedLine.text;
             label = parsedLine.label;
             value = parsedLine.label;
 
@@ -35,6 +37,10 @@ export function makeItems(selectedText: string, options: ItemOptions): string {
             }
         }
         else {
+            // Simple item creation:
+            // remove an ordinal-looking prefix, but otherwise preserve the line.
+            text = lines[li].replace(/^[a-zA-Z0-9]{1,2}[.:)][ \t]+/,"");
+
             label = `${prefix}${li + 1}`;
             value = `${li + 1}`;
         }

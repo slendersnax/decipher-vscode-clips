@@ -9,7 +9,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeRows",
             options: {
                 tag: "row",
-                createLabels: false,
+                parseLabels: false,
                 createValues: false,
                 reverse: false
             }
@@ -18,7 +18,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeRowsWithValues",
             options: {
                 tag: "row",
-                createLabels: false,
+                parseLabels: false,
                 createValues: true,
                 reverse: false
             }
@@ -27,7 +27,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeRowsMatchingLabels",
             options: {
                 tag: "row",
-                createLabels: true,
+                parseLabels: true,
                 createValues: false,
                 reverse: false
             }
@@ -36,7 +36,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeRowsMatchingValues",
             options: {
                 tag: "row",
-                createLabels: true,
+                parseLabels: true,
                 createValues: true,
                 reverse: false
             }
@@ -45,7 +45,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeRowsReverse",
             options: {
                 tag: "row",
-                createLabels: false,
+                parseLabels: false,
                 createValues: false,
                 reverse: true
             }
@@ -54,7 +54,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeRowsWithValuesReverse",
             options: {
                 tag: "row",
-                createLabels: false,
+                parseLabels: false,
                 createValues: true,
                 reverse: true
             }
@@ -63,7 +63,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeCols",
             options: {
                 tag: "col",
-                createLabels: false,
+                parseLabels: false,
                 createValues: false,
                 reverse: false
             }
@@ -72,7 +72,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeColsWithValues",
             options: {
                 tag: "col",
-                createLabels: false,
+                parseLabels: false,
                 createValues: true,
                 reverse: false
             }
@@ -81,7 +81,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeColsMatchingLabels",
             options: {
                 tag: "col",
-                createLabels: true,
+                parseLabels: true,
                 createValues: false,
                 reverse: false
             }
@@ -90,7 +90,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeColsMatchingValues",
             options: {
                 tag: "col",
-                createLabels: true,
+                parseLabels: true,
                 createValues: true,
                 reverse: false
             }
@@ -99,7 +99,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeColsReverse",
             options: {
                 tag: "col",
-                createLabels: false,
+                parseLabels: false,
                 createValues: false,
                 reverse: true
             }
@@ -108,7 +108,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeColsWithValuesReverse",
             options: {
                 tag: "col",
-                createLabels: false,
+                parseLabels: false,
                 createValues: true,
                 reverse: true
             }
@@ -117,7 +117,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeChoices",
             options: {
                 tag: "choice",
-                createLabels: false,
+                parseLabels: false,
                 createValues: false,
                 reverse: false
             }
@@ -126,7 +126,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeChoicesWithValues",
             options: {
                 tag: "choice",
-                createLabels: false,
+                parseLabels: false,
                 createValues: true,
                 reverse: false
             }
@@ -135,7 +135,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeChoicesMatchingLabels",
             options: {
                 tag: "choice",
-                createLabels: true,
+                parseLabels: true,
                 createValues: false,
                 reverse: false
             }
@@ -144,7 +144,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeChoicesMatchingValues",
             options: {
                 tag: "choice",
-                createLabels: true,
+                parseLabels: true,
                 createValues: true,
                 reverse: false
             }
@@ -153,7 +153,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeChoicesReverse",
             options: {
                 tag: "choice",
-                createLabels: false,
+                parseLabels: false,
                 createValues: false,
                 reverse: true
             }
@@ -162,7 +162,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeChoicesWithValuesReverse",
             options: {
                 tag: "choice",
-                createLabels: false,
+                parseLabels: false,
                 createValues: true,
                 reverse: true
             }
@@ -171,7 +171,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeCases",
             options: {
                 tag: "case",
-                createLabels: false,
+                parseLabels: false,
                 createValues: false,
                 reverse: false
             }
@@ -180,7 +180,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeCasesMatchingLabels",
             options: {
                 tag: "case",
-                createLabels: true,
+                parseLabels: true,
                 createValues: false,
                 reverse: false
             }
@@ -189,7 +189,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeGroups",
             options: {
                 tag: "group",
-                createLabels: false,
+                parseLabels: false,
                 createValues: false,
                 reverse: false
             }
@@ -198,7 +198,7 @@ export function registerItemCommands(context: vscode.ExtensionContext) {
             id: "decipher.makeGroupsMatchingLabels",
             options: {
                 tag: "group",
-                createLabels: true,
+                parseLabels: true,
                 createValues: false,
                 reverse: false
             }
