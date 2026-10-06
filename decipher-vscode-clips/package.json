@@ -519,6 +519,11 @@
           "command": "decipher.makeRowsMatchingValues",
           "when": "editorLangId == decipher-xml",
           "group": "elementTypes@16"
+        },
+        {
+          "command": "decipher.switchRowsCols",
+          "when": "editorLangId == decipher-xml",
+          "group": "elementTypes@17"
         }
       ]
     },
