@@ -15,16 +15,15 @@ export function tidyQuestionInput(input: string): QuestionInput {
         };
     }
 
-    // Convert 1.2 -> 1_2
-    input = input.replace(/^(\w?\d+)\.(\d+)/, "$1_$2");
-
     // Remove extra blank lines
     while (input.includes("\n\n")) {
         input = input.replace(/\n\n/g, "\n");
     }
 
+    const labelPattern = /^([a-zA-Z0-9_-]+(?:\.[a-zA-Z0-9_-]+)*)(?:\.|:|\)|\s)/;
+
     // Extract the question label
-    const labelMatch = input.match(/^([a-zA-Z0-9-_]+)(?:\.|:|\)|\s)/);
+    const labelMatch = input.match(labelPattern);
 
     if (!labelMatch) {
         throw new Error("Could not determine question label.");
@@ -33,9 +32,12 @@ export function tidyQuestionInput(input: string): QuestionInput {
     let label = labelMatch[1];
 
     // Remove the label from the input
-    input = input.replace(/^([a-zA-Z0-9-_]+)(?:\.|:|\)|\s)/, "");
+    input = input.replace(labelPattern, "");
 
-    // testing if label is formed of digits
+    // Convert 1.2 -> 1_2, A.3 -> A3 etc.
+    label = label.replace(/\./g, "_");
+
+    // testing if label starts with a digit
     if (/^\d/.test(label)) {
         label = "Q" + label;
     }
