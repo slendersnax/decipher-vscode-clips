@@ -1,5 +1,5 @@
 
-import { ParsedItem, hasLabel, isNumericLabel } from "../types/ParsedItem";
+import { ParsedItem, hasLabel, startsWithNumber } from "../types/ParsedItem";
 import { ItemOptions } from "../types/ItemOptions";
 import { fixUnicode } from "../helpers/fixUnicode";
 import { parseLine } from "../helpers/parseLine";
@@ -29,12 +29,16 @@ export function makeItems(selectedText: string, options: ItemOptions): string {
 
             text = parsedLine.text;
             label = parsedLine.label;
-            value = parsedLine.label;
+            // values must be integers
+            value = parsedLine.label.replace(/[^0-9]/g, "");
 
             // if it isn't already 'r1', 'c99', etc.
-            if (isNumericLabel(parsedLine)) {
+            if (startsWithNumber(parsedLine)) {
                 label = `${prefix}${parsedLine.label}`;
             }
+
+            // labels don't accept dots
+            label = label.replace(/\./g, "_");
         }
         else {
             // Simple item creation:

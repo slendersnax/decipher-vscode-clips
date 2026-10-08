@@ -2,7 +2,7 @@
   "name": "decipher-vscode-clips",
   "displayName": "decipher-vscode-clips",
   "description": "Decipher snippets and commands for VS Code",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "engines": {
     "vscode": "^1.100.0"
   },

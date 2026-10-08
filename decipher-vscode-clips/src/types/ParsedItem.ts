@@ -7,6 +7,6 @@ export function hasLabel(item: ParsedItem): boolean {
     return item.label !== "";
 }
 
-export function isNumericLabel(item: ParsedItem): boolean {
-    return /^\d+$/.test(item.label);
+export function startsWithNumber(item: ParsedItem): boolean {
+    return /^\d/.test(item.label);
 }
