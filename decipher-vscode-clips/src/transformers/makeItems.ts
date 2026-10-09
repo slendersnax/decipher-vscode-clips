@@ -6,9 +6,11 @@ import { parseLine } from "../helpers/parseLine";
 
 export function makeItems(selectedText: string, options: ItemOptions): string {
     let lines = fixUnicode(selectedText.trim())
+        .replace(/\r\n?/g, "\n")
         .replace(/\n{2,}/g, "\n")
         .split("\n")
-        .map(line => line.trim());
+        .map(line => line.trim())
+        .filter(line => line !== "");
 
     const prefix = {
         row: "r",
@@ -20,9 +22,6 @@ export function makeItems(selectedText: string, options: ItemOptions): string {
 
     for (let li = 0; li < lines.length; li ++) {
         let label, text, value, extra = "";
-        let parsedLine: ParsedItem = parseLine(lines[li]);
-
-        text = parsedLine.text;
 
         if (options.parseLabels) {
             const parsedLine: ParsedItem = parseLine(lines[li]);
